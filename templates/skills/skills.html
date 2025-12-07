@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+
+{% block page_title %}My Skills & Expertise{% endblock %}
+
+{% block content %}
+<section class="skills-container">
+    <p style="margin-bottom: 30px; max-width: 800px;">
+        As a full-stack developer and security specialist, I've cultivated a diverse skill set across multiple domains.
+        My expertise spans modern frontend frameworks, robust backend systems, cloud infrastructure, and cybersecurity
+        practices.
+    </p>
+
+    <!-- Category Access -->
+    <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 40px;">
+        <div class="pill"
+            style="display: flex; align-items: center; gap: 8px; background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.2); cursor: pointer;">
+            <i class="fab fa-python" style="color: #3b82f6;"></i> Programming
+        </div>
+        <div class="pill"
+            style="display: flex; align-items: center; gap: 8px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); color: #34d399; cursor: pointer;">
+            <i class="fas fa-globe"></i> Web Development
+        </div>
+        <div class="pill"
+            style="display: flex; align-items: center; gap: 8px; background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.2); color: #fbbf24; cursor: pointer;">
+            <i class="fas fa-database"></i> Database
+        </div>
+        <div class="pill"
+            style="display: flex; align-items: center; gap: 8px; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2); color: #f87171; cursor: pointer;">
+            <i class="fas fa-shield-alt"></i> Security
+        </div>
+    </div>
+
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px;">
+        <!-- Programming Languages -->
+        <div class="card">
+            <h3 style="color: var(--accent-blue); display: flex; align-items: center; gap: 10px; margin-bottom: 25px;">
+                <div
+                    style="width: 40px; height: 40px; background: rgba(59, 130, 246, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                    <i class="fab fa-python"></i>
+                </div>
+                <div>
+                    <span style="display: block; font-size: 1.1rem; font-weight: 600;">Programming Languages</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 400;">Core programming
+                        expertise</span>
+                </div>
+            </h3>
+
+            <div class="skill-list" style="display: flex; flex-direction: column; gap: 20px;">
+                <!-- Python -->
+                <div class="skill-row"
+                    style="display: grid; grid-template-columns: 100px 1fr 80px; align-items: center; gap: 15px;">
+                    <span style="font-weight: 500; font-size: 0.9rem;">Python</span>
+                    <div class="progress-bg" style="height: 8px; background: #1e293b; border-radius: 4px;">
+                        <div class="progress-fill"
+                            style="height: 100%; width: 95%; background: var(--accent-blue); border-radius: 4px;"></div>
+                    </div>
+                    <span class="pill"
+                        style="background: rgba(59, 130, 246, 0.1); color: #60a5fa; font-size: 0.7rem; text-align: center;">Expert</span>
+                </div>
+                <!-- JS -->
+                <div class="skill-row"
+                    style="display: grid; grid-template-columns: 100px 1fr 80px; align-items: center; gap: 15px;">
+                    <span style="font-weight: 500; font-size: 0.9rem;">JavaScript</span>
+                    <div class="progress-bg" style="height: 8px; background: #1e293b; border-radius: 4px;">
+                        <div class="progress-fill"
+                            style="height: 100%; width: 85%; background: var(--accent-blue); border-radius: 4px;"></div>
+                    </div>
+                    <span class="pill"
+                        style="background: rgba(59, 130, 246, 0.1); color: #60a5fa; font-size: 0.7rem; text-align: center;">Expert</span>
+                </div>
+                <!-- Go -->
+                <div class="skill-row"
+                    style="display: grid; grid-template-columns: 100px 1fr 80px; align-items: center; gap: 15px;">
+                    <span style="font-weight: 500; font-size: 0.9rem;">GoLang</span>
+                    <div class="progress-bg" style="height: 8px; background: #1e293b; border-radius: 4px;">
+                        <div class="progress-fill"
+                            style="height: 100%; width: 70%; background: var(--accent-blue); border-radius: 4px;"></div>
+                    </div>
+                    <span class="pill"
+                        style="background: rgba(59, 130, 246, 0.1); color: #60a5fa; font-size: 0.7rem; text-align: center;">Adv.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Web Dev -->
+        <div class="card">
+            <h3 style="color: #34d399; display: flex; align-items: center; gap: 10px; margin-bottom: 25px;">
+                <div
+                    style="width: 40px; height: 40px; background: rgba(16, 185, 129, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div>
+                    <span style="display: block; font-size: 1.1rem; font-weight: 600;">Web Development</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 400;">Full-stack
+                        technologies</span>
+                </div>
+            </h3>
+
+            <div class="skill-list" style="display: flex; flex-direction: column; gap: 20px;">
+                <!-- Django -->
+                <div class="skill-row"
+                    style="display: grid; grid-template-columns: 100px 1fr 80px; align-items: center; gap: 15px;">
+                    <span style="font-weight: 500; font-size: 0.9rem;">Django</span>
+                    <div class="progress-bg" style="height: 8px; background: #1e293b; border-radius: 4px;">
+                        <div class="progress-fill"
+                            style="height: 100%; width: 95%; background: #34d399; border-radius: 4px;"></div>
+                    </div>
+                    <span class="pill"
+                        style="background: rgba(16, 185, 129, 0.1); color: #34d399; font-size: 0.7rem; text-align: center;">Expert</span>
+                </div>
+                <!-- React -->
+                <div class="skill-row"
+                    style="display: grid; grid-template-columns: 100px 1fr 80px; align-items: center; gap: 15px;">
+                    <span style="font-weight: 500; font-size: 0.9rem;">ReactJS</span>
+                    <div class="progress-bg" style="height: 8px; background: #1e293b; border-radius: 4px;">
+                        <div class="progress-fill"
+                            style="height: 100%; width: 80%; background: #34d399; border-radius: 4px;"></div>
+                    </div>
+                    <span class="pill"
+                        style="background: rgba(16, 185, 129, 0.1); color: #34d399; font-size: 0.7rem; text-align: center;">Expert</span>
+                </div>
+                <!-- Node -->
+                <div class="skill-row"
+                    style="display: grid; grid-template-columns: 100px 1fr 80px; align-items: center; gap: 15px;">
+                    <span style="font-weight: 500; font-size: 0.9rem;">Node.js</span>
+                    <div class="progress-bg" style="height: 8px; background: #1e293b; border-radius: 4px;">
+                        <div class="progress-fill"
+                            style="height: 100%; width: 75%; background: #34d399; border-radius: 4px;"></div>
+                    </div>
+                    <span class="pill"
+                        style="background: rgba(16, 185, 129, 0.1); color: #34d399; font-size: 0.7rem; text-align: center;">Adv.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

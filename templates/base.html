@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Insaf M | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- Left Sidebar (Contextual) -->
+        <aside class="left-sidebar">
+            <div class="profile-summary">
+                <div class="profile-img-small">
+                    <!-- Placeholder, replace with actual user image path -->
+                    <img src="https://via.placeholder.com/60" alt="Profile">
+                </div>
+                <div class="profile-text">
+                    <h3>Muhammed Irshad M</h3>
+                    <p>Software Engineer & Ethical Hacker</p>
+                </div>
+                <div class="theme-toggle"
+                    style="margin-left: auto; width: 35px; height: 35px; font-size: 0.9rem; margin-bottom: 0;">
+                    <i class="fas fa-moon"></i>
+                </div>
+            </div>
+
+            <div class="sidebar-title-area">
+                <h1 class="page-title">{% block page_title %}Welcome{% endblock %}</h1>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="sidebar-visual">
+                {% block sidebar_image %}
+                <!-- Default Image or Placeholder -->
+                <div class="sidebar-img-placeholder">
+                    <img src="https://via.placeholder.com/400x400/112240/64ffda?text=Portfolio" alt="Visual">
+                </div>
+                {% endblock %}
+            </div>
+
+            <div class="sidebar-footer">
+                <p>Connect With Me</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="copyright">
+                    &copy; 2025 Muhammed Irshad M.
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </main>
+
+        <!-- Right Navigation Sidebar -->
+        <aside class="right-nav">
+            <nav class="nav-menu">
+                <a href="{% url 'home' %}"
+                    class="nav-item {% if request.resolver_match.url_name == 'home' %}active{% endif %}">
+                    <div class="icon-box"><i class="fas fa-home"></i></div>
+                    <span>Home</span>
+                </a>
+                <a href="{% url 'about' %}"
+                    class="nav-item {% if request.resolver_match.url_name == 'about' %}active{% endif %}">
+                    <div class="icon-box"><i class="fas fa-user"></i></div>
+                    <span>About</span>
+                </a>
+                <a href="{% url 'skills' %}"
+                    class="nav-item {% if request.resolver_match.url_name == 'skills' %}active{% endif %}">
+                    <div class="icon-box"><i class="fas fa-code"></i></div>
+                    <span>Skills</span>
+                </a>
+                <a href="{% url 'projects' %}"
+                    class="nav-item {% if request.resolver_match.url_name == 'projects' %}active{% endif %}">
+                    <div class="icon-box"><i class="fas fa-project-diagram"></i></div>
+                    <span>Projects</span>
+                </a>
+                <a href="{% url 'blog' %}"
+                    class="nav-item {% if request.resolver_match.url_name == 'blog' %}active{% endif %}">
+                    <div class="icon-box"><i class="fas fa-blog"></i></div>
+                    <span>Blog</span>
+                </a>
+                <a href="{% url 'contact' %}"
+                    class="nav-item {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
+                    <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                    <span>Contact</span>
+                </a>
+            </nav>
+
+        </aside>
+
+    </div>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

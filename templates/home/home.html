@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_title %}Welcome{% endblock %}
+
+{% block sidebar_image %}
+<!-- Hide sidebar image on home as we move the visual focus to the main center -->
+<div class="sidebar-img-placeholder"
+    style="height: 100%; min-height: 300px; display: flex; align-items: center; justify-content: center; background: transparent; border: none; box-shadow: none;">
+    <div style="text-align: center; opacity: 0.5;">
+        <i class="fas fa-code" style="font-size: 5rem; color: var(--accent-secondary);"></i>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<section class="home-container" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+
+    <!-- Large Round Profile Image Box -->
+    <div class="profile-image-box animate-fade-in" style="margin-bottom: 30px; position: relative;">
+        <!-- Glowing Ring -->
+        <div
+            style="position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px; border-radius: 50%; border: 2px dashed var(--accent-secondary); animation: spin 10s linear infinite;">
+        </div>
+
+        <div class="main-img-container"
+            style="width: 250px; height: 250px; border-radius: 50%; overflow: hidden; border: 5px solid var(--accent-primary); box-shadow: 0 0 50px rgba(200, 172, 214, 0.3); animation: pulseGlow 3s infinite ease-in-out;">
+            <!-- Replace with actual user image -->
+            <img src="https://via.placeholder.com/250x250/2E236C/C8ACD6?text=MIM" alt="Muhammed Irshad M"
+                style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+    </div>
+
+    <!-- Hello Pill -->
+    <div class="hello-pill pill pill-blue animate-slide-up delay-1"
+        style="background: var(--bg-panel); border-color: var(--accent-primary); color: var(--accent-primary); margin-bottom: 20px;">
+        Hello, I'm
+    </div>
+
+    <!-- Large Stylish Name -->
+    <div class="name-wrapper"
+        style="display: inline-block; overflow: hidden; white-space: nowrap; margin: 10px 0 20px 0;">
+        <h1 class="animate-name" style="
+            font-size: 5rem; 
+            line-height: 1.2; 
+            background: linear-gradient(to right, #ffffff 20%, #C8ACD6 40%, #ffffff 60%, #C8ACD6 80%); 
+            background-size: 200% auto;
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            font-weight: 800; 
+            letter-spacing: -2px;
+            animation: textShine 3s linear infinite;
+        ">
+            Muhammed Irshad M
+        </h1>
+    </div>
+
+    <h2 class="animate-slide-up delay-3"
+        style="font-size: 2rem; color: var(--text-white); margin-bottom: 30px; font-weight: 600;">
+        <span style="color: var(--accent-primary);">Software Engineer</span>
+    </h2>
+
+    <div class="tagline-box animate-slide-up delay-4" style="max-width: 700px; margin: 0 auto 40px;">
+        <h3 style="color: var(--accent-secondary); margin-bottom: 15px; font-weight: 700; font-size: 1.5rem;">
+            Building Secure. Thinking Different.
+        </h3>
+        <p style="font-size: 1.25rem; color: var(--text-muted); line-height: 1.6;">
+            Crafting resilient applications with security at the core. I create secure, scalable applications that
+            protect against evolving threats while delivering exceptional user experiences.
+        </p>
+    </div>
+
+    <!-- Expertise Grid -->
+    <div class="expertise-grid animate-slide-up delay-4"
+        style="display: flex; gap: 30px; justify-content: center; margin-bottom: 50px; flex-wrap: wrap;">
+        <div class="exp-item"
+            style="display: flex; align-items: center; gap: 10px; background: rgba(46, 35, 108, 0.5); padding: 10px 20px; border-radius: 20px; border: 1px solid var(--accent-secondary);">
+            <i class="fas fa-layer-group" style="color: var(--accent-primary);"></i>
+            <span>Full-Stack Development</span>
+        </div>
+        <div class="exp-item"
+            style="display: flex; align-items: center; gap: 10px; background: rgba(46, 35, 108, 0.5); padding: 10px 20px; border-radius: 20px; border: 1px solid var(--accent-secondary);">
+            <i class="fas fa-shield-alt" style="color: var(--accent-primary);"></i>
+            <span>Cybersecurity</span>
+        </div>
+        <div class="exp-item"
+            style="display: flex; align-items: center; gap: 10px; background: rgba(46, 35, 108, 0.5); padding: 10px 20px; border-radius: 20px; border: 1px solid var(--accent-secondary);">
+            <i class="fas fa-server" style="color: var(--accent-primary);"></i>
+            <span>Secure Architecture</span>
+        </div>
+    </div>
+
+    <!-- Main CTA Buttons -->
+    <div class="action-row animate-slide-up delay-4" style="display: flex; gap: 20px; justify-content: center;">
+        <a href="#" class="btn btn-primary" style="min-width: 220px;">
+            <i class="fas fa-download"></i> Download Resume
+        </a>
+        <a href="{% url 'contact' %}" class="btn btn-outline" style="min-width: 220px;">
+            <i class="fas fa-envelope"></i> Contact Me
+        </a>
+    </div>
+
+</section>
+
+<style>
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2.5rem !important;
+        }
+
+        .profile-image-box .main-img-container {
+            width: 180px;
+            height: 180px;
+        }
+    }
+</style>
+{% endblock %}

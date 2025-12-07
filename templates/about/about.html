@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+
+{% block page_title %}About Me{% endblock %}
+
+{% block content %}
+<section class="about-container">
+
+    <div class="intro-text" style="margin-bottom: 40px;">
+        <p style="font-size: 1.1rem; max-width: 800px;">
+            I'm a passionate Software Engineer with expertise in web development and cybersecurity. With a keen eye for
+            detail and a commitment to excellence, I create secure, efficient, and user-friendly applications that solve
+            real-world problems.
+        </p>
+    </div>
+
+    <!-- My Journey -->
+    <div class="card" style="margin-bottom: 30px;">
+        <h3 style="color: var(--accent-purple); display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+            <div
+                style="width: 32px; height: 32px; background: rgba(139, 92, 246, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            My Journey
+        </h3>
+        <p class="text-secondary">
+            My journey in software development began with PHP, where I primarily worked on Drupal and WordPress
+            projects. As our team evolved and tackled more complex challenges, we migrated to modern technologies like
+            Django, Node.js, and GoLang, which allowed me to expand my skills in building scalable and secure
+            applications. <br><br>
+            Driven by a deep interest in cybersecurity, I pursued and earned certifications like CEH, strengthening my
+            ability to identify and mitigate vulnerabilities.
+        </p>
+    </div>
+
+    <!-- Professional Experience -->
+    <div class="card" style="margin-bottom: 30px;">
+        <h3 style="color: var(--accent-blue); display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+            <div
+                style="width: 32px; height: 32px; background: rgba(59, 130, 246, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-briefcase"></i>
+            </div>
+            Professional Experience
+        </h3>
+
+        <div class="experience-item"
+            style="border-left: 2px solid var(--accent-blue); padding-left: 20px; margin-left: 10px;">
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 10px;">
+                <h4 style="color: white; font-size: 1.1rem;">Technical Lead</h4>
+                <span class="pill pill-blue">Nov 2022 - Present</span>
+            </div>
+            <h5 style="color: var(--text-muted); margin-bottom: 15px;">Beinex</h5>
+            <ul style="list-style-type: disc; margin-left: 20px; color: var(--text-gray);">
+                <li>Leading a team in the development of a dedicated Governance, Risk, Compliance, and Analytics
+                    platform.</li>
+                <li>Utilized technologies such as Python Django and various database management systems.</li>
+                <li>Incorporating advanced analytics, AI, and ML to provide actionable insights.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Certifications & Interests Grid -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+        <!-- Certifications -->
+        <div class="card">
+            <h3 style="color: #60a5fa; display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                <iv class="fas fa-certificate"></iv>
+                Certifications
+            </h3>
+
+            <div class="cert-item"
+                style="background: rgba(2, 4, 8, 0.3); padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 3px solid #ef4444;">
+                <div style="display: flex; justify-content: space-between; align-items: start;">
+                    <div>
+                        <h4 style="color: white; font-size: 0.95rem;">Certified Ethical Hacker (CEH)</h4>
+                        <p style="font-size: 0.8rem; color: var(--text-muted);">EC-Council</p>
+                    </div>
+                    <span class="pill"
+                        style="background: rgba(239, 68, 68, 0.1); color: #f87171; padding: 2px 8px; font-size: 0.7rem;">Certified</span>
+                </div>
+            </div>
+
+            <div class="cert-item"
+                style="background: rgba(2, 4, 8, 0.3); padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                <div style="display: flex; justify-content: space-between; align-items: start;">
+                    <div>
+                        <h4 style="color: white; font-size: 0.95rem;">Ethical Hacking Essentials</h4>
+                        <p style="font-size: 0.8rem; color: var(--text-muted);">EC-Council</p>
+                    </div>
+                    <span class="pill"
+                        style="background: rgba(16, 185, 129, 0.1); color: #34d399; padding: 2px 8px; font-size: 0.7rem;">Certified</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interests -->
+        <div class="card">
+            <h3 style="color: #f472b6; display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                <i class="fas fa-heart"></i>
+                Interests & Hobbies
+            </h3>
+
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div
+                        style="width: 40px; height: 40px; background: rgba(139, 92, 246, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--accent-purple);">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 0.95rem; color: white;">YouTube Tutorials</h4>
+                        <p style="font-size: 0.8rem;">Creating security tutorials</p>
+                    </div>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div
+                        style="width: 40px; height: 40px; background: rgba(16, 185, 129, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #10b981;">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 0.95rem; color: white;">Real-Life Solutions</h4>
+                        <p style="font-size: 0.8rem;">Practical applications</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
