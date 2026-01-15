@@ -23,6 +23,6 @@ urlpatterns = [
     path("about/", include("about.urls")),
     path("skills/", include("skills.urls")),
     path("projects/", include("projects.urls")),
-    path("blog/", include("blog.urls")),
+    # path("blog/", include("blog.urls")),
     path("contact/", include("contact.urls")),
 ]

@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammed Insaf M | Portfolio</title>
+    <title>Muhammed Irshad M | Portfolio</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=1">
 </head>
 
 <body>
@@ -31,11 +31,11 @@
                     <img src="{% static 'images/photo.jpeg' %}" alt="Profile">
                 </div>
                 <div class="profile-text">
-                    <h3>Muhammed Irshad M</h3>
+                    <h5>Muhammed Irshad M</h5>
                     <p>ML & Software Engineer</p>
                 </div>
                 <div class="theme-toggle"
-                    style="margin-left: auto; width: 30px; height: 30px; font-size: 0.9rem; margin-bottom: 0;">
+                    style="margin-left: auto; width: 30px; height: 30px; font-size: 0.9rem; margin-bottom: 0; cursor: pointer;">
                     <i class="fas fa-moon"></i>
                 </div>
             </div>
@@ -162,11 +162,7 @@
                     <div class="icon-box"><i class="fas fa-project-diagram"></i></div>
                     <span>Projects</span>
                 </a>
-                <a href="{% url 'blog' %}"
-                    class="nav-item {% if request.resolver_match.url_name == 'blog' %}active{% endif %}">
-                    <div class="icon-box"><i class="fas fa-blog"></i></div>
-                    <span>Blog</span>
-                </a>
+
                 <a href="{% url 'contact' %}"
                     class="nav-item {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
                     <div class="icon-box"><i class="fas fa-envelope"></i></div>
@@ -178,7 +174,7 @@
 
     </div>
 
-    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/main.js' %}?v=1"></script>
 </body>
 
 </html>

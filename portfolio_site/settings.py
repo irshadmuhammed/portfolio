@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     "about",
     "skills",
     "projects",
-    "blog",
+    # "blog",
     "contact",
 ]
 
@@ -128,3 +128,11 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Email Configuration (Real Sending via Gmail)
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'irshadmm16@gmail.com'  # Your Gmail address
+EMAIL_HOST_PASSWORD = 'iklh bdmo rgjj rqmj'  # Generate an App Password: https://myaccount.google.com/apppasswords
