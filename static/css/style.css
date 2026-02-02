@@ -545,6 +545,11 @@ a {
         overflow: auto;
     }
 
+    body {
+        overflow: auto;
+        height: auto;
+    }
+
     .left-sidebar {
         border-right: none;
         border-bottom: 1px solid var(--border-color);
