@@ -546,8 +546,8 @@ a {
     }
 
     body {
-        overflow: auto;
-        height: auto;
+        overflow-y: auto !important;
+        height: auto !important;
     }
 
     .left-sidebar {
