@@ -1,14 +1,13 @@
-﻿"""Utility helpers for the chatbot."""
-from langchain_core.documents import Document
+"""Utility helpers for the chatbot."""
 
 
 SOURCE_ICONS = {
-    "pdf": "ðŸ“„",
-    "webpage": "ðŸŒ",
+    "pdf": "📄",
+    "webpage": "🌐",
 }
 
 
-def extract_sources(source_docs: list[Document]) -> list[dict]:
+def extract_sources(source_docs):
     """
     Extract unique source references from retrieved documents.
     Returns list of {icon, label} dicts for frontend chips.

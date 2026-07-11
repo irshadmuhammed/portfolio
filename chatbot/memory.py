@@ -7,7 +7,7 @@ from . import config
 SESSION_KEY = "chatbot_history"
 
 
-def get_history(request) -> list:
+def get_history(request):
     """Return conversation history from session."""
     return request.session.get(SESSION_KEY, [])
 
