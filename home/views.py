@@ -8,7 +8,7 @@ def home(request):
 
 
 def download_resume(request):
-    filepath = os.path.join(settings.BASE_DIR, 'static', 'files', 'resume.pdf')
+    filepath = os.path.join(settings.BASE_DIR, 'static', 'files', 'Muhammed_Irshad_M_Resume_FullStack.pdf')
     if not os.path.exists(filepath):
         raise Http404("Resume not found")
     # as_attachment=True triggers the "Save as" dialog

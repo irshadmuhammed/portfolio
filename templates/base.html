@@ -1,4 +1,4 @@
-{% load static %}
+﻿{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,120 +16,15 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=2">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=8">
 </head>
 
 <body>
 
     <div class="app-container">
 
-        <!-- Left Sidebar (Contextual) -->
-        <aside class="left-sidebar">
-            <div class="profile-summary">
-                <div class="profile-img-small">
-                    <!-- Placeholder, replace with actual user image path -->
-                    <img src="{% static 'images/photo.jpeg' %}" alt="Profile">
-                </div>
-                <div class="profile-text">
-                    <h5>Muhammed Irshad M</h5>
-                    <p>ML & Software Engineer</p>
-                </div>
-                <div class="theme-toggle"
-                    style="margin-left: auto; width: 30px; height: 30px; font-size: 0.9rem; margin-bottom: 0; cursor: pointer;">
-                    <i class="fas fa-moon"></i>
-                </div>
-            </div>
-
-            <div class="sidebar-title-area">
-                <h1 class="page-title">{% block page_title %}Welcome{% endblock %}</h1>
-                <div class="title-underline"></div>
-            </div>
-
-            <div class="sidebar-visual">
-                {% block sidebar_image %}
-                <!-- Default Image or Placeholder -->
-                <!-- Chatbot Interface Workspace -->
-                <div class="chatbot-container"
-                    style="height: 100%; display: flex; flex-direction: column; background: var(--bg-panel); border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); overflow: hidden;">
-                    <!-- Header -->
-                    <div class="chat-header"
-                        style="padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 10px; background: rgba(0,0,0,0.2);">
-                        <div
-                            style="width: 30px; height: 30px; background: var(--accent-secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-robot" style="font-size: 0.8rem; color: white;"></i>
-                        </div>
-                        <div>
-                            <h4 style="font-size: 0.9rem; margin: 0; color: white;">Personal Assistant</h4>
-                            <span
-                                style="font-size: 0.65rem; color: #4ade80; display: flex; align-items: center; gap: 4px;">
-                                <span style="width: 6px; height: 6px; background: #4ade80; border-radius: 50%;"></span>
-                                Online
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- Messages Area -->
-                    <div class="chat-messages"
-                        style="flex-grow: 1; padding: 15px; overflow-y: auto; display: flex; flex-direction: column; gap: 15px;">
-                        <!-- Bot Message -->
-                        <div style="display: flex; gap: 10px;">
-                            <div
-                                style="min-width: 25px; height: 25px; background: var(--accent-secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-top: 5px;">
-                                <i class="fas fa-robot" style="font-size: 0.7rem; color: white;"></i>
-                            </div>
-                            <div
-                                style="background: rgba(255,255,255,0.05); padding: 10px 15px; border-radius: 0 15px 15px 15px; font-size: 0.85rem; color: var(--text-gray); line-height: 1.4;">
-                                Hi there! I'm here to help you know more about Muhammed Irshad. Ask me anything about
-                                his skills,
-                                projects, or experience!
-                            </div>
-                        </div>
-
-                        <!-- User Message Example (Hidden by default or static for UI) -->
-                        <div style="display: flex; gap: 10px; flex-direction: row-reverse;">
-                            <div
-                                style="min-width: 25px; height: 25px; background: var(--accent-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-top: 5px;">
-                                <i class="fas fa-user" style="font-size: 0.7rem; color: var(--bg-dark);"></i>
-                            </div>
-                            <div
-                                style="background: var(--accent-primary); padding: 10px 15px; border-radius: 15px 0 15px 15px; font-size: 0.85rem; color: var(--bg-dark); line-height: 1.4;">
-                                Tell me about his recent projects.
-                            </div>
-                        </div>
-                        <!-- Bot Message -->
-                        <div style="display: flex; gap: 10px;">
-                            <div
-                                style="min-width: 25px; height: 25px; background: var(--accent-secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-top: 5px;">
-                                <i class="fas fa-robot" style="font-size: 0.7rem; color: white;"></i>
-                            </div>
-                            <div
-                                style="background: rgba(255,255,255,0.05); padding: 10px 15px; border-radius: 0 15px 15px 15px; font-size: 0.85rem; color: var(--text-gray); line-height: 1.4;">
-                                He recently built an Instagram AI Companion and a Web Technology Detector package. Check
-                                out the
-                                Projects section!
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Input Area -->
-                    <div class="chat-input-area"
-                        style="padding: 15px; border-top: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.2);">
-                        <div
-                            style="display: flex; gap: 10px; background: rgba(255,255,255,0.05); padding: 8px 12px; border-radius: 25px; border: 1px solid rgba(255,255,255,0.1);">
-                            <input type="text" placeholder="Type a message..."
-                                style="background: transparent; border: none; outline: none; color: white; flex-grow: 1; font-size: 0.85rem;">
-                            <button
-                                style="background: transparent; border: none; color: var(--accent-primary); cursor: pointer;">
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                {% endblock %}
-            </div>
-
-
-        </aside>
+        <!-- Left Sidebar (Compact Profile) -->
+        
 
         <!-- Main Content Area -->
         <main class="main-content">
@@ -141,7 +36,10 @@
 
         <!-- Right Navigation Sidebar -->
         <aside class="right-nav">
-            <nav class="nav-menu">
+            <div class="theme-toggle" style="margin-bottom: auto; width: 45px; height: 45px; border-radius: 50%; background: var(--bg-panel); border: 1px solid var(--accent-secondary); display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-muted); font-size: 1.2rem; transition: all 0.3s;" onmouseover="this.style.color='var(--accent-primary)'" onmouseout="this.style.color='var(--text-muted)'">
+                <i class="fas fa-moon"></i>
+            </div>
+            <nav class="nav-menu" style="margin-top: auto; margin-bottom: auto;">
                 <a href="{% url 'home' %}"
                     class="nav-item {% if request.resolver_match.url_name == 'home' %}active{% endif %}">
                     <div class="icon-box"><i class="fas fa-home"></i></div>
@@ -169,12 +67,131 @@
                     <span>Contact</span>
                 </a>
             </nav>
-
         </aside>
 
     </div>
 
-    <script src="{% static 'js/main.js' %}?v=1"></script>
+    <!-- Floating Action Button for Copilot -->
+    <button class="copilot-fab" id="copilotFab" title="Chat with IrshadGPT">
+        <i class="fas fa-robot"></i>
+    </button>
+
+    <!-- IrshadGPT AI Copilot Popup Panel -->
+    <div class="copilot-popup" id="copilotPopup">
+        <div class="copilot-panel">
+            <!-- Header -->
+            <div class="copilot-header" title="Drag to move">
+                <div class="copilot-avatar" aria-label="IrshadGPT Avatar">MI</div>
+                <div class="copilot-header-text">
+                    <div class="copilot-title">IrshadGPT</div>
+                    <div class="copilot-subtitle">
+                        <span class="copilot-dot"></span> Online
+                    </div>
+                </div>
+                <button class="copilot-reset-btn" id="copilotReset" title="New conversation">
+                    <i class="fas fa-rotate-right"></i>
+                </button>
+                <button class="copilot-close-btn" id="copilotClose" title="Close chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Tagline -->
+            <div class="copilot-tagline">Ask anything about Muhammed Irshad</div>
+
+            <!-- Suggested Chips -->
+            <div class="copilot-chips" id="copilotChips">
+                <button class="copilot-chip" data-q="Tell me about your AI projects">🤖 AI Projects</button>
+                <button class="copilot-chip" data-q="What technologies have you worked with?">💻 Skills</button>
+                <button class="copilot-chip" data-q="Tell me about your experience">💼 Experience</button>
+                <button class="copilot-chip" data-q="How can I contact you?">📧 Contact</button>
+                <button class="copilot-chip" data-q="What is your latest project?">🚀 Latest Project</button>
+                <button class="copilot-chip" data-q="Tell me about your education and background">🎓 Education</button>
+            </div>
+
+            <!-- Conversation -->
+            <div class="copilot-messages" id="copilotMessages">
+                <!-- Welcome message -->
+                <div class="copilot-msg copilot-msg-assistant">
+                    <div class="copilot-msg-label">
+                        <span class="copilot-msg-avatar-sm">MI</span>
+                        Assistant
+                    </div>
+                    <div class="copilot-msg-body">
+                        Hello! I'm <strong>IrshadGPT</strong>, Muhammed Irshad's AI portfolio assistant. I can answer questions about his projects, skills, experience, and more. Click a suggestion above or type your question!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input -->
+            <div class="copilot-input-wrap">
+                <div class="copilot-input-box">
+                    <textarea
+                        id="copilotInput"
+                        class="copilot-textarea"
+                        placeholder="Ask anything about Irshad..."
+                        rows="1"
+                        maxlength="500"
+                    ></textarea>
+                    <button class="copilot-send-btn" id="copilotSend" title="Send">
+                        <i class="fas fa-arrow-up"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Draggable Chatbot Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const chatbot = document.getElementById('copilotPopup');
+            const header = chatbot.querySelector('.copilot-header');
+            if (header && chatbot) {
+                header.style.cursor = 'grab';
+                
+                let isDragging = false;
+                let currentX = 0;
+                let currentY = 0;
+                let initialX = 0;
+                let initialY = 0;
+                let xOffset = 0;
+                let yOffset = 0;
+
+                header.addEventListener("mousedown", dragStart);
+                document.addEventListener("mouseup", dragEnd);
+                document.addEventListener("mousemove", drag);
+
+                function dragStart(e) {
+                    initialX = e.clientX - xOffset;
+                    initialY = e.clientY - yOffset;
+                    if (e.target === header || header.contains(e.target)) {
+                        isDragging = true;
+                        header.style.cursor = 'grabbing';
+                    }
+                }
+
+                function dragEnd(e) {
+                    initialX = currentX;
+                    initialY = currentY;
+                    isDragging = false;
+                    if(header) header.style.cursor = 'grab';
+                }
+
+                function drag(e) {
+                    if (isDragging) {
+                        e.preventDefault();
+                        currentX = e.clientX - initialX;
+                        currentY = e.clientY - initialY;
+                        xOffset = currentX;
+                        yOffset = currentY;
+                        chatbot.style.transform = "translate3d(" + currentX + "px, " + currentY + "px, 0)";
+                    }
+                }
+            }
+        });
+    </script>
+    <script src="{% static 'js/main.js' %}?v=8"></script>
 </body>
 
 </html>
+

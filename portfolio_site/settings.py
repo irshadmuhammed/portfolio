@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # Load .env file
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -43,6 +47,7 @@ INSTALLED_APPS = [
     "projects",
     # "blog",
     "contact",
+    "chatbot",
 ]
 
 MIDDLEWARE = [
@@ -144,3 +149,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'irshadmm16@gmail.com'  # Your Gmail address
 EMAIL_HOST_PASSWORD = 'iklh bdmo rgjj rqmj'  # Generate an App Password: https://myaccount.google.com/apppasswords
+
+# ── Chatbot / RAG Configuration ─────────────────────────────────────────────
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
+CHROMA_DB_PATH = BASE_DIR / "chatbot" / "db"
