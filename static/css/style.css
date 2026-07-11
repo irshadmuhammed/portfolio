@@ -1,4 +1,4 @@
-﻿:root {
+:root {
     /* Color Hunt Palette: https://colorhunt.co/palette/17153b2e236c433d8bc8acd6 */
     --bg-dark: #17153B;
     /* Main Background */
@@ -759,8 +759,8 @@ a {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: var(--accent);
-    color: #fff;
+    background: var(--accent-primary);
+    color: var(--bg-dark);
     border: none;
     box-shadow: 0 8px 24px rgba(37, 99, 235, 0.4);
     font-size: 1.6rem;
