@@ -1,4 +1,4 @@
-﻿"""
+"""
 Chatbot API views.
 POST /chatbot/chat/  -> streaming SSE
 POST /chatbot/reset/ -> clear session
@@ -149,9 +149,14 @@ def chat_view(request):
 
         api_key = _get_api_key()
 
-        # 3. Stream Response
+                # 3. Stream Response
         def generate():
             full = ""
+            if not api_key:
+                err_msg = "Please configure your OPENROUTER_API_KEY environment variable on PythonAnywhere to enable the chatbot."
+                yield "data: " + json.dumps({"token": err_msg, "done": True}) + "\n\n"
+                return
+
             try:
                 resp = http_req.post(
                     url=OPENROUTER_URL,
@@ -171,6 +176,17 @@ def chat_view(request):
                     stream=True,
                     timeout=60,
                 )
+                
+                if resp.status_code != 200:
+                    try:
+                        err_json = resp.json()
+                        msg = err_json.get("error", {}).get("message", str(err_json))
+                    except:
+                        msg = resp.text
+                    err_msg = f"API Error ({resp.status_code}): {msg}"
+                    yield "data: " + json.dumps({"token": err_msg, "done": True}) + "\n\n"
+                    return
+                
                 for line in resp.iter_lines():
                     if not line: continue
                     line_s = line.decode("utf-8") if isinstance(line, bytes) else line
