@@ -1,4 +1,4 @@
-﻿// Main JS - IrshadGPT Copilot + Theme Toggle
+// Main JS - IrshadGPT Copilot + Theme Toggle
 document.addEventListener("DOMContentLoaded", () => {
 
     // Smooth scroll
@@ -193,14 +193,38 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeBtn = document.getElementById("copilotClose");
 
     if (fab && popup) {
-        fab.addEventListener("click", () => {
+        fab.addEventListener("click", (e) => {
+            e.stopPropagation();
             popup.classList.toggle("open");
+            if (popup.classList.contains("open")) {
+                const input = document.getElementById("copilotInput");
+                if (input) input.focus();
+            }
         });
     }
 
     if (closeBtn && popup) {
-        closeBtn.addEventListener("click", () => {
+        closeBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
             popup.classList.remove("open");
         });
     }
+
+    // Close chatbot when clicking outside
+    document.addEventListener("click", (e) => {
+        if (window._copilotJustDragged) return;
+        if (popup && popup.classList.contains("open")) {
+            if (!popup.contains(e.target) && !fab.contains(e.target)) {
+                popup.classList.remove("open");
+            }
+        }
+    });
+
+    // Close chatbot on Escape key
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && popup && popup.classList.contains("open")) {
+            popup.classList.remove("open");
+        }
+    });
 });
+

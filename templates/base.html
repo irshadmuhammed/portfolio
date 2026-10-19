@@ -1,4 +1,4 @@
-﻿{% load static %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +16,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=9">
 </head>
 
 <body>
@@ -145,11 +145,13 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const chatbot = document.getElementById('copilotPopup');
+            if (!chatbot) return;
             const header = chatbot.querySelector('.copilot-header');
-            if (header && chatbot) {
+            if (header) {
                 header.style.cursor = 'grab';
                 
                 let isDragging = false;
+                let didMove = false;
                 let currentX = 0;
                 let currentY = 0;
                 let initialX = 0;
@@ -166,6 +168,7 @@
                     initialY = e.clientY - yOffset;
                     if (e.target === header || header.contains(e.target)) {
                         isDragging = true;
+                        didMove = false;
                         header.style.cursor = 'grabbing';
                     }
                 }
@@ -174,11 +177,16 @@
                     initialX = currentX;
                     initialY = currentY;
                     isDragging = false;
-                    if(header) header.style.cursor = 'grab';
+                    if (header) header.style.cursor = 'grab';
+                    if (didMove) {
+                        window._copilotJustDragged = true;
+                        setTimeout(() => { window._copilotJustDragged = false; }, 200);
+                    }
                 }
 
                 function drag(e) {
                     if (isDragging) {
+                        didMove = true;
                         e.preventDefault();
                         currentX = e.clientX - initialX;
                         currentY = e.clientY - initialY;
@@ -190,7 +198,7 @@
             }
         });
     </script>
-    <script src="{% static 'js/main.js' %}?v=8"></script>
+    <script src="{% static 'js/main.js' %}?v=9"></script>
 </body>
 
 </html>
