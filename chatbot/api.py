@@ -58,14 +58,25 @@ PROJECTS:
 SKILLS:
 - Machine Learning & AI: PyTorch, TensorFlow, Scikit-learn, LangChain, RAG, Vector Databases
 - Backend Development: Django, Flask, Python, REST APIs
+- Networking & ELV: ELV Systems, CCTV Surveillance, Access Control, Structured Cabling, Fiber Optics, Rack Design, BOQ Preparation
 - Data Science: Pandas, NumPy, Matplotlib, Seaborn
 - Tools & Platforms: Git, GitHub, SQLite, PostgreSQL
 
 EXPERIENCE:
-- Intern at Maxlore Innovations (Aug 2022)
+1. ELV Engineer Trainee at SysSense Technologies (April 2026 - August 2026) | Kochi, Kerala, India
+   - Worked on Extra-Low Voltage (ELV) systems and network infrastructure planning.
+   - Assisted in design and documentation of ELV systems, including CCTV surveillance and access control systems.
+   - Prepared Bills of Quantities (BOQs) for structured cabling, networking, and security infrastructure.
+   - Worked on MDF/IDF rack planning, network switch selection, and fiber-optic backbone connectivity.
+   - Supported structured cabling design involving Cat6 cabling, patch panels, keystone jacks, and outlets.
+   - Technologies: ELV Systems, CCTV Surveillance, Access Control, Structured Cabling, Fiber Optics, BOQ Preparation.
+
+2. Software Intern at Maxlore Innovations (August 2022)
+   - Developed REST APIs using Flask that reduced response times by 30% through query optimization.
+   - Utilized Python, Flask, and database management systems; collaborated with senior developers.
 
 EDUCATION:
-- Computer Science / Engineering background
+- Computer Science / Engineering background (Diploma in Computer Engineering & B.Tech in CSE at College of Engineering Trivandrum)
 """
 
 SYSTEM_PROMPT = """You are IrshadGPT, the AI portfolio assistant for Muhammed Irshad M.
