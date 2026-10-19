@@ -24,7 +24,7 @@ OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 OPENROUTER_MODEL = "openrouter/free"
 
 PORTFOLIO_KNOWLEDGE = """
-Muhammed Irshad M is a Product Specialist Intern at HotelKey and a Software Engineer based in Kerala, India.
+Muhammed Irshad M is a Product Specialist at HotelKey and a Software Engineer based in Kerala, India.
 
 Contact:
 - Email: irshadmm16@gmail.com
@@ -64,7 +64,7 @@ SKILLS:
 - Tools & Platforms: Git, GitHub, SQLite, PostgreSQL
 
 EXPERIENCE:
-1. Product Specialist Intern at HotelKey (August 2026 - Present)
+1. Product Specialist at HotelKey (August 2026 - Present)
    - Contributes to the testing, validation, and quality assurance of hotel Property Management System (PMS).
    - Performs functional and regression testing across hotel reservation, guest management, housekeeping, billing, and payment workflows.
    - Validates REST APIs, HTTP status codes, request payloads, response data, and error-handling behavior.
