@@ -24,7 +24,7 @@ OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 OPENROUTER_MODEL = "openrouter/free"
 
 PORTFOLIO_KNOWLEDGE = """
-Muhammed Irshad M is a Machine Learning & Software Engineer based in Kerala, India.
+Muhammed Irshad M is a Product Specialist Intern at HotelKey and a Software Engineer based in Kerala, India.
 
 Contact:
 - Email: irshadmm16@gmail.com
@@ -56,6 +56,7 @@ PROJECTS:
    GitHub: https://github.com/irshadmuhammed/StudenPerformance
 
 SKILLS:
+- Product & Quality Assurance: Hotel Property Management System (PMS), REST API Testing, Functional & Regression Testing, Defect Tracking, API Validation
 - Machine Learning & AI: PyTorch, TensorFlow, Scikit-learn, LangChain, RAG, Vector Databases
 - Backend Development: Django, Flask, Python, REST APIs
 - Networking & ELV: ELV Systems, CCTV Surveillance, Access Control, Structured Cabling, Fiber Optics, Rack Design, BOQ Preparation
@@ -63,7 +64,14 @@ SKILLS:
 - Tools & Platforms: Git, GitHub, SQLite, PostgreSQL
 
 EXPERIENCE:
-1. ELV Engineer Trainee at SysSense Technologies (April 2026 - August 2026) | Kochi, Kerala, India
+1. Product Specialist Intern at HotelKey (August 2026 - Present)
+   - Contributes to the testing, validation, and quality assurance of hotel Property Management System (PMS).
+   - Performs functional and regression testing across hotel reservation, guest management, housekeeping, billing, and payment workflows.
+   - Validates REST APIs, HTTP status codes, request payloads, response data, and error-handling behavior.
+   - Verifies bug fixes and new features against acceptance criteria and product requirements.
+   - Technologies & Skills: Property Management System (PMS), REST API Testing, Functional Testing, Regression Testing, Quality Assurance, API Validation.
+
+2. ELV Engineer Trainee at SysSense Technologies (April 2026 - August 2026) | Kochi, Kerala, India
    - Worked on Extra-Low Voltage (ELV) systems and network infrastructure planning.
    - Assisted in design and documentation of ELV systems, including CCTV surveillance and access control systems.
    - Prepared Bills of Quantities (BOQs) for structured cabling, networking, and security infrastructure.
@@ -71,7 +79,7 @@ EXPERIENCE:
    - Supported structured cabling design involving Cat6 cabling, patch panels, keystone jacks, and outlets.
    - Technologies: ELV Systems, CCTV Surveillance, Access Control, Structured Cabling, Fiber Optics, BOQ Preparation.
 
-2. Software Intern at Maxlore Innovations (August 2022)
+3. Software Intern at Maxlore Innovations (August 2022)
    - Developed REST APIs using Flask that reduced response times by 30% through query optimization.
    - Utilized Python, Flask, and database management systems; collaborated with senior developers.
 
